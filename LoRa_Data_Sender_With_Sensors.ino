@@ -17,6 +17,7 @@ Adafruit_BMP280 bmp;
 float Pressure;
 float Altitude;
 int ldr = 4;
+int Red_Led = 6;
 int counter = 0;
 int Dummyvalue;
 
@@ -26,6 +27,7 @@ long randNumber; //Create Random Number To Avoid Transmission Loss For First Dig
 void setup() 
 {
   Serial.begin(115200);
+  pinMode(Red_Led, OUTPUT);
   
  randomSeed(analogRead(0));
  dht.begin();
@@ -76,6 +78,9 @@ void loop()
   LoRa.beginPacket();      
   LoRa.print(Datastring);
   LoRa.print(counter);
+  digitalWrite(Red_Led, HIGH);
+  delay(500);
+  digitalWrite(Red_Led, LOW);
   LoRa.endPacket();
   counter++;
   
