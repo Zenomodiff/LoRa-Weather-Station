@@ -80,23 +80,23 @@ it is a dummy value sent by the LoRa String
 in case of transmission Loss*/
 
 lcd.clear(); lcd.setCursor(0,0);
-lcd.print("Temp:-"); lcd.println(secondValue);
+lcd.print("Temp:-"); lcd.print(secondValue);
 delay(2000);
 
 lcd.clear(); lcd.setCursor(0,0);
-lcd.print("Humi:-"); lcd.println(thirdValue);
+lcd.print("Humi:-"); lcd.print(thirdValue);
 delay(2000);
 
 lcd.clear(); lcd.setCursor(0,0);
-lcd.print("Ldr:-"); lcd.println(fourthValue);
+lcd.print("Ldr:-"); lcd.print(fourthValue);
 delay(2000);
 
 lcd.clear(); lcd.setCursor(0,0);
-lcd.print("Pres:-"); lcd.println(fifthValue);
+lcd.print("Pres:-"); lcd.print(fifthValue);
 delay(2000);
 
 lcd.clear(); lcd.setCursor(0,0);
-lcd.print("Alti:-"); lcd.println(sixthValue);
+lcd.print("Alti:-"); lcd.print(sixthValue);
 delay(2000);
 
 }
